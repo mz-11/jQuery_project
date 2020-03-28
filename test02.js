@@ -1,4 +1,6 @@
 (function($, window) {
+// 引数の$,windowについて
+
   $(function() {
     
     // 課題1
@@ -12,7 +14,7 @@
     alert(html);
     
     // 課題3
-    $('#index').append('<li>メソッド</li>');
+    $('ul#index').append('<li>メソッド</li>');
     
     // 課題4
     $('ul#index').find('li').each(function() {
@@ -27,6 +29,6 @@
       alert(t);
     });
     
-    
   });
 })(jQuery, window);
+// エラー：jQueryの定義について？
