@@ -1,17 +1,25 @@
 // 課題1.2
 
 var answer = prompt('数字を入力してください');
-if(answer % 2 == 0) {
-  alert('正の数です');
-} else if(answer % 2 == 1) {
-  alert('負の数です');
-} else {
+// if(answer % 2 == 0) {
+
+// isNaN():引数が数値でない場合に true を返す
+if(!isNaN(answer)) {
+  if(answer > 0) {
+    alert('正の数です');
+  // } else if(answer % 2 == 1) {
+  } else if(answer < 0) {
+    alert('負の数です');
+  } else {
+  alert('0は正の数でも、負の数でもありません');
+  }
+}else{
   alert('数値を入力してください');
 }
 
+
 // 課題3
 var animals = ['パンダ', 'ライオン', 'キリン'];
-
 var i = 0;
 while(i < animals.length) {
   alert(animals[i]);
@@ -32,6 +40,10 @@ if(animal != 'ライオン' ) {
    
 } else {
   alert('ライオン');
+  // 'ライオン'の添字(subscript)も表示する
+  var subscriptnum = animals.indexOf('ライオン');
+  var subscript = '添字は' + subscriptnum + 'です'
+  alert(subscript);
   break;
 }
 }
@@ -45,6 +57,7 @@ var animals = [
   
 var answer = prompt('パンダ、ライオン、キリンの中から一種類選んでください。');
 var result = animals.findIndex(({name}) => name === answer);
+// ({name}) => name はなに？？
 alert(animals[result].weight);
 
 // 課題8
