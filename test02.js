@@ -1,5 +1,6 @@
 (function($, window) {
-// 引数の$,windowについて
+// 引数の$,windowについて...window:予め用意されているオブジェクトのこと
+
 
   $(function() {
     
@@ -10,8 +11,13 @@
     var text = $('#index').text();
     alert(text);
     
+    
     var html = $('#index').html();
     alert(html);
+    
+    // text(),html()の違い
+    // textはタグの中身の文字列を取得、htmlはタグも含めて取得。
+    
     
     // 課題3
     $('ul#index').append('<li>メソッド</li>');
@@ -22,11 +28,14 @@
       alert(leng);
     });
     
-    // 課題4
+    // 課題5
     $('ul#index').find('li').each(function() {
       var leng = $(this).text().length;
-      var t = $(this).text() + ' [' + leng + '文字]';
-      alert(t);
+      
+      // alertではなく各文字列の最後に追加
+      // var t = $(this).text() + ' [' + leng + '文字]';
+      $(this).append(' [' + leng + '文字]');
+      // alert(t);
     });
     
   });
