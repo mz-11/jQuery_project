@@ -1,0 +1,10 @@
+.flatpickr {
+  vertical-align: top;
+  margin-left: 2px;
+  border: 1px solid red;
+}
+
+.calender_image {
+  width: 20px;
+  height: 20px;
+}

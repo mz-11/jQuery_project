@@ -1,0 +1,27 @@
+<!--参照：https://github.com/ninton/jquery.jpostal.js,https://allabout.co.jp/gm/gc/446750/2/-->
+
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  
+  <!--課題5,6-->
+  
+  <!--住所入力フォームにjquery本体とjquery.jpostal.jsをインクルード-->
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="//jpostal-1006.appspot.com/jquery.jpostal.js"></script>
+   
+  <!-- 自作JavaScriptの読み込み -->
+  <script src="test09.js"></script>
+  
+  
+  <form>
+    郵便番号〒：
+    <input type="text" id="postcode1" name="postcode1" maxlength="3" />-<input type="text" id="postcode2" name="postcode2" maxlength="4" />
+    <input type="button" id="btn_postcode" value="住所を表示" /><br />
+    住所：
+    <input type="text" id="address" name="address"/>
+  </form>
+</body>
+</html>
